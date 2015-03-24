@@ -1,8 +1,11 @@
 require 'cell'
 describe Cell do
-  it { expect(subject).to respond_to :state }
+  it 'starts empty' do
+    expect(subject.full).not_to be
+  end
 
-  it 'knows if its empty' do
-    expect(subject).to be_empty
+  it 'becomes full when shot' do
+    subject.shot
+    expect(subject.full).to be
   end
 end
