@@ -8,5 +8,4 @@ describe Cell do
     subject.shot
     expect(subject.full).to be
   end
-
 end
