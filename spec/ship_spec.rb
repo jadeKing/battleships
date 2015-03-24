@@ -14,4 +14,12 @@ describe Ship do
     subject.location_coords!([[:a, 1]])
     expect(subject.coords).to eq [[:a, 1]]
   end
+  it 'does not receive a string' do
+    expect { subject.set_coords('string') }.to raise_error 'Requires an array'
+  end
+  it 'it can set the co-ordinates' do
+    subject.size = 1
+    subject.set_coords([[:a, 1]])
+    expect(subject.coords).to eq [[:a, 1]]
+  end
 end
