@@ -1,11 +1,11 @@
 # Ssshhhhh!
 class Cell
-  attr_accessor :state
-  def initialize(state = ' ')
-    @state = state
+  attr_accessor :full
+  def initialize
+    @full = false
   end
 
-  def empty?
-    state == ' '
+  def shot
+    @full = true
   end
 end
